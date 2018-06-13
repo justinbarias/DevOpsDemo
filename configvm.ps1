@@ -9,3 +9,5 @@ Install-WindowsFeature -Name Web-Mgmt-Service
 
 # Configure Windows Firewall
 netsh advfirewall firewall add rule name="http" dir=in action=allow protocol=TCP localport=80
+
+choco install dotnet4.7.1 -y
