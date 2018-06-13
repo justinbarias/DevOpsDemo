@@ -1,5 +1,7 @@
 # Install chocolatey
-Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+if(!(Test-Path "C:\ProgramData\chocolatey")){
+    Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+}
 
 # Install IIS (with Management Console)
 Install-WindowsFeature -name Web-Server -IncludeManagementTools
