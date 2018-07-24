@@ -18,3 +18,7 @@ netsh advfirewall firewall add rule name="http" dir=in action=allow protocol=TCP
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User") 
 
 choco install dotnet4.7.1 -y
+
+[System.Environment]::SetEnvironmentVariable("RUNTIME_ENVIRONMENT", "AzureIaaS","Machine")
+
+
